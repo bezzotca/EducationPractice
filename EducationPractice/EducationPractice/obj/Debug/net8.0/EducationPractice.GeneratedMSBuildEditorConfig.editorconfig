@@ -30,6 +30,9 @@ build_property.EnableGeneratedComInterfaceComImportInterop =
 [C:/Users/andre/Desktop/Practice4Course/EducationPractice/EducationPractice/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/andre/Desktop/Practice4Course/EducationPractice/EducationPractice/Views/ArrangersView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/andre/Desktop/Practice4Course/EducationPractice/EducationPractice/Views/LoginView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

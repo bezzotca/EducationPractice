@@ -1,0 +1,141 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:vm="using:EducationPractice.ViewModels"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="EducationPractice.Views.ArrangersView"
+			 x:DataType="vm:ArrangersViewModel">
+	<Grid ColumnDefinitions="200,*">
+		<StackPanel
+			Grid.Column="0">
+			<Button
+			Content="Вернуться назад"
+			VerticalAlignment="Top"
+			Margin="20,10,0,0"
+			Background="DeepSkyBlue"
+			Foreground="Black"
+			FontFamily="Times New Roman"
+			FontWeight="Bold"
+			HorizontalContentAlignment="Center"
+			Width="150"
+			Height="30"
+			CornerRadius="5"
+			Command="{Binding GoBack}"/>
+			<Image Source="{Binding Photo}" 
+				   Width="150" 
+				   Height="250"
+				   Margin="0,100,0,0"/>
+		<Button
+			Margin="20,60,0,0"
+			Width="150"
+			Height="90"
+			CornerRadius="10"
+			Background="LightGray">
+			<TextBlock
+				Text="Мой профиль"
+				Background="LightGray"
+				FontFamily="Times New Roman"
+				FontWeight="Bold"
+				Foreground="Black"
+				FontSize="24"
+				TextWrapping="Wrap"
+				TextAlignment="Center"
+				VerticalAlignment="Center"
+				HorizontalAlignment="Center"/>
+		</Button>
+		</StackPanel>
+		<StackPanel
+			Grid.Column="1"
+			VerticalAlignment="Center"
+			HorizontalAlignment="Center"
+			Spacing="20">
+			<TextBlock
+				Text="{Binding HelloMessage}"
+				FontFamily="Times New Roman"
+				FontWeight="Bold"
+				Foreground="Black"
+				FontSize="24"
+				TextWrapping="Wrap"
+				TextAlignment="Center"
+				VerticalAlignment="Center"
+				HorizontalAlignment="Center"/>
+			<StackPanel
+				Orientation="Horizontal"
+				Spacing="20">
+				<TextBlock
+					Text="{Binding MrMrs}"
+					FontFamily="Times New Roman"
+					FontWeight="Bold"
+					Foreground="Black"
+					FontSize="24"
+					TextWrapping="Wrap"
+					TextAlignment="Center"
+					VerticalAlignment="Center"
+					HorizontalAlignment="Center"/>
+				<TextBlock
+					Text="{Binding FirstName}"
+					FontFamily="Times New Roman"
+					FontWeight="Bold"
+					Foreground="Black"
+					FontSize="24"
+					TextWrapping="Wrap"
+					TextAlignment="Center"
+					VerticalAlignment="Center"
+					HorizontalAlignment="Center"/>
+			</StackPanel>
+			<Button
+			Width="250"
+			Height="110"
+			CornerRadius="10"
+			Background="LightGray">
+				<TextBlock
+					Text="Мероприятия"
+					Background="LightGray"
+					FontFamily="Times New Roman"
+					FontWeight="Bold"
+					Foreground="Black"
+					FontSize="24"
+					TextWrapping="Wrap"
+					TextAlignment="Center"
+					VerticalAlignment="Center"
+					HorizontalAlignment="Center"/>
+			</Button>
+			<Button
+			Width="250"
+			Height="110"
+			CornerRadius="10"
+			Background="LightGray">
+				<TextBlock
+					Text="Учатники"
+					Background="LightGray"
+					FontFamily="Times New Roman"
+					FontWeight="Bold"
+					Foreground="Black"
+					FontSize="24"
+					TextWrapping="Wrap"
+					TextAlignment="Center"
+					VerticalAlignment="Center"
+					HorizontalAlignment="Center"/>
+			</Button>
+			<Button
+			Width="250"
+			Height="110"
+			CornerRadius="10"
+			Background="LightGray">
+				<TextBlock
+					Text="Жюри"
+					Background="LightGray"
+					FontFamily="Times New Roman"
+					FontWeight="Bold"
+					Foreground="Black"
+					FontSize="24"
+					TextWrapping="Wrap"
+					TextAlignment="Center"
+					VerticalAlignment="Center"
+					HorizontalAlignment="Center"/>
+			</Button>
+		</StackPanel>
+		
+	</Grid>
+</UserControl>

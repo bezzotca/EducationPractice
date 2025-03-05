@@ -12,6 +12,8 @@ using CommunityToolkit.Mvvm.Input;
 using SkiaSharp;
 using Avalonia.Platform;
 using System.Globalization;
+using EducationPractice.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EducationPractice.ViewModels
 {
@@ -42,7 +44,9 @@ namespace EducationPractice.ViewModels
             }
             else if (Db.Arrangers.FirstOrDefault(x => x.Email == Login && x.Passwd == Password) != null && ResultMessage == "Капча пройдена!")
             {
-                Message = "*Вы выполнили авторизацию как Организатор*";
+                MainWindowViewModel.Instance.loginedArranger = Db.Arrangers.FirstOrDefault(x => x.Email == Login && x.Passwd == Password);
+                MainWindowViewModel.Instance.PageSwitcher = new ArrangersViewModel();
+                
             }
             else if(ResultMessage == "Капча пройдена!")
             {
