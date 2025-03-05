@@ -214,6 +214,9 @@ public partial class EducationpracticeContext : DbContext
                 .HasMaxLength(250)
                 .HasColumnName("event_name");
             entity.Property(e => e.Idcity).HasColumnName("idcity");
+            entity.Property(e => e.Image)
+                .HasMaxLength(20)
+                .HasColumnName("image");
 
             entity.HasOne(d => d.IdcityNavigation).WithMany(p => p.EventsPlans)
                 .HasForeignKey(d => d.Idcity)

@@ -6,5 +6,54 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="EducationPractice.Views.LoginView"
 			 x:DataType="vm:LoginViewModel">
-  Welcome to Login!
+	<StackPanel HorizontalAlignment="Center"  VerticalAlignment="Center" Margin="0,100,0,0">
+		<TextBlock Text="Авторизация" FontFamily="Times New Roman" 
+				   FontSize="30" 
+				   FontStyle="Normal"
+				   FontWeight="Bold"
+				   HorizontalAlignment="Center"/>
+		<TextBox Watermark="Введите логин"
+				 Text="{Binding Login}"
+				 Width="200" 
+				 Height="30" 
+				 Margin="0,20,0,0"
+				 FontFamily="Times New Roman"/>
+		<TextBox Watermark="Введите пароль"
+				 Text="{Binding Password}"
+				 Width="200" 
+				 Height="30" 
+				 Margin="0,20,0,0"
+				 PasswordChar="☻"
+				 FontFamily="Times New Roman"/>
+		<StackPanel Spacing="10" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
+			<Image Source="{Binding CaptchaImage}" Width="150" Height="50"/>
+			<TextBox Text="{Binding UserInput, Mode=TwoWay}" Width="150" HorizontalAlignment="Center"/>
+			<StackPanel Orientation="Horizontal" Spacing="5">
+				<Button Content="Обновить" Command="{Binding GenerateCaptchaCommand}"/>
+				<Button Content="Проверить" Command="{Binding ValidateCaptchaCommand}"/>
+			</StackPanel>
+			<TextBlock Text="{Binding ResultMessage}" Foreground="Red" FontWeight="Bold" HorizontalAlignment="Center"/>
+		</StackPanel>
+			<Button Width="200"
+				Height="30" 
+				Margin="0,20,0,0"
+				Content="Авторизоваться"
+				FontFamily="Times New Roman"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Background="LightSteelBlue"
+				Foreground="Black"
+				FontWeight="Bold"
+				HorizontalContentAlignment="Center"
+				Command="{Binding GetLogined}"/>
+		<TextBlock
+			FontFamily="Times New Roman"
+			Foreground="Red"
+			Background="LightGray"
+			Margin="0,10,0,0"
+			Width="200"
+			Height="50"
+			Text="{Binding Message}"
+			TextWrapping="Wrap"/>
+	</StackPanel>
 </UserControl>

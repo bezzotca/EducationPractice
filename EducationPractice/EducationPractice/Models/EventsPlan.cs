@@ -15,6 +15,8 @@ public partial class EventsPlan
 
     public int Idcity { get; set; }
 
+    public string? Image { get; set; }
+
     public virtual ICollection<Activity> Activities { get; set; } = new List<Activity>();
 
     public virtual City IdcityNavigation { get; set; } = null!;
