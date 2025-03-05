@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D777270D-FE40-422B-A5E5-57966D7104EE}|EducationPractice\\EducationPractice.csproj|c:\\users\\andre\\desktop\\practice4course\\educationpractice\\educationpractice\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{D777270D-FE40-422B-A5E5-57966D7104EE}|EducationPractice\\EducationPractice.csproj|solutionrelative:educationpractice\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D777270D-FE40-422B-A5E5-57966D7104EE}|EducationPractice\\EducationPractice.csproj|c:\\users\\andre\\desktop\\practice4course\\educationpractice\\educationpractice\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D777270D-FE40-422B-A5E5-57966D7104EE}|EducationPractice\\EducationPractice.csproj|solutionrelative:educationpractice\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -23,6 +27,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MainWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\EducationPractice\\Views\\MainWindow.axaml",
+              "RelativeDocumentMoniker": "EducationPractice\\Views\\MainWindow.axaml",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\EducationPractice\\Views\\MainWindow.axaml",
+              "RelativeToolTip": "EducationPractice\\Views\\MainWindow.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-05T06:29:34.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainWindowViewModel.cs",
               "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\EducationPractice\\ViewModels\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "EducationPractice\\ViewModels\\MainWindowViewModel.cs",
