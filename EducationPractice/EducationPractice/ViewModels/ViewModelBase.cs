@@ -5,6 +5,6 @@ namespace EducationPractice.ViewModels
 {
     public partial class ViewModelBase : ObservableObject
     {
-        [ObservableProperty] EducationpracticeContext db = new EducationpracticeContext();
+        [ObservableProperty] static EducationpracticeContext db = new EducationpracticeContext();
     }
 }

@@ -31,7 +31,8 @@
 			Width="150"
 			Height="90"
 			CornerRadius="10"
-			Background="LightGray">
+			Background="LightGray"
+			Command="{Binding WatchProfile}">
 			<TextBlock
 				Text="Мой профиль"
 				Background="LightGray"

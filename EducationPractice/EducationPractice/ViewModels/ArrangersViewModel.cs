@@ -18,7 +18,6 @@ namespace EducationPractice.ViewModels
         [ObservableProperty] string helloMessage;
         [ObservableProperty] string mrMrs;
         [ObservableProperty] string firstName;
-        [ObservableProperty] string imagePath = ".\\Assets\\Arrangers_media\\";
         [ObservableProperty] Bitmap photo;
         public ArrangersViewModel()
         {
@@ -60,6 +59,11 @@ namespace EducationPractice.ViewModels
         public void GoBack()
         {
             MainWindowViewModel.Instance.PageSwitcher = new LoginViewModel();
+        }
+
+        public void WatchProfile()
+        {
+            MainWindowViewModel.Instance.PageSwitcher = new ArrangerProfileViewModel();
         }
 
         public Bitmap ConvertPathToBitmap()

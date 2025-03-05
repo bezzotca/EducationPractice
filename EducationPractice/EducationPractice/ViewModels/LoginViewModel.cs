@@ -30,6 +30,7 @@ namespace EducationPractice.ViewModels
 
         public void GetLogined()
         {
+            
             if (Db.Experts.FirstOrDefault(x => x.Email == Login && x.Passwd == Password) != null && ResultMessage == "Капча пройдена!")
             {
                 Message = "*Вы выполнили авторизацию как член жюри*";
