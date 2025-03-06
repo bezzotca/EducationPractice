@@ -6,7 +6,7 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="EducationPractice.Views.ArrangersView"
 			 x:DataType="vm:ArrangersViewModel">
-	<Grid ColumnDefinitions="200,*">
+	<Grid ColumnDefinitions="150,*,*">
 		<StackPanel
 			Grid.Column="0">
 			<Button
@@ -138,6 +138,26 @@
 					HorizontalAlignment="Center"/>
 			</Button>
 		</StackPanel>
-		
+		<StackPanel Grid.Column="2"
+					VerticalAlignment="Center">
+			<Button
+			Width="250"
+			Height="110"
+			CornerRadius="10"
+			Background="LightGray"
+			Command="{Binding GoRegistration}">
+				<TextBlock
+					Text="Регистрация"
+					Background="LightGray"
+					FontFamily="Times New Roman"
+					FontWeight="Bold"
+					Foreground="Black"
+					FontSize="24"
+					TextWrapping="Wrap"
+					TextAlignment="Center"
+					VerticalAlignment="Center"
+					HorizontalAlignment="Center"/>
+			</Button>
+		</StackPanel>
 	</Grid>
 </UserControl>

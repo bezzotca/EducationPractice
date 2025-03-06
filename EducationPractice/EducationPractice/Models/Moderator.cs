@@ -21,7 +21,7 @@ public partial class Moderator
 
     public int Direction { get; set; }
 
-    public int Events { get; set; }
+    public int? Events { get; set; }
 
     public string Passwd { get; set; } = null!;
 

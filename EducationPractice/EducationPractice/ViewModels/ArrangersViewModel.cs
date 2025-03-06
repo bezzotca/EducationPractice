@@ -110,6 +110,11 @@ namespace EducationPractice.ViewModels
             MainWindowViewModel.Instance.PreviousPage = MainWindowViewModel.Instance.PageSwitcher.GetType().Name;
             MainWindowViewModel.Instance.PageSwitcher = new EventListViewModel();
         }
+        
+        public void GoRegistration()
+        {
+            MainWindowViewModel.Instance.PageSwitcher = new RegistrationViewModel();
+        }
     }
 }
 

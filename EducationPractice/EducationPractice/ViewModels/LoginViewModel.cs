@@ -30,8 +30,6 @@ namespace EducationPractice.ViewModels
 
         public void GetLogined()
         {
-            MainWindowViewModel.Instance.loginedArranger = Db.Arrangers.FirstOrDefault(x => x.Email == Login && x.Passwd == Password);
-            MainWindowViewModel.Instance.PageSwitcher = new ArrangersViewModel();
             if (Db.Experts.FirstOrDefault(x => x.Email == Login && x.Passwd == Password) != null && ResultMessage == "Капча пройдена!")
             {
                 Message = "*Вы выполнили авторизацию как член жюри*";
