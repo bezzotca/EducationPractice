@@ -1,0 +1,69 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:vm="using:EducationPractice.ViewModels"
+			 xmlns:local="clr-namespace:EducationPractice.ViewModels"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="EducationPractice.Views.MembersView"
+			 x:DataType="vm:MembersViewModel">
+	<Grid RowDefinitions="100,*">
+		<StackPanel Grid.Row="0"
+					Spacing="10"
+					Orientation="Horizontal">
+			<Button
+				Content="Вернуться назад"
+				Margin="20,10,0,0"
+				Background="DeepSkyBlue"
+				Foreground="Black"
+				FontFamily="Times New Roman"
+				FontWeight="Bold"
+				HorizontalContentAlignment="Center"
+				Width="150"
+				Height="30"
+				Command="{Binding GoBack}"/>
+			<TextBox Height="50"
+					 Width="250"
+					 Watermark="Фильтрация по названию"
+					 Text="{Binding TextFind}"/>
+			<StackPanel>
+				<RadioButton Content="По убыванию возраста" Command="{Binding DataSort}" CommandParameter="1"/>
+				<RadioButton Content="По возрастанию возраста" Command="{Binding DataSort}" CommandParameter="2"/>
+			</StackPanel>
+		</StackPanel>
+		<ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+			<ListBox ItemsSource="{Binding Members}" Width="800" Height="450" Background="White">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<Border BorderBrush="Black" BorderThickness="2" CornerRadius="5" Margin="0,5" Background="LimeGreen">
+							<Grid ColumnDefinitions="100,*">
+								<StackPanel Grid.Column="0">
+									<Image Source="{Binding Photo}"
+										   Height="100"
+										   Width="100"/>
+								</StackPanel>
+								<StackPanel Grid.Column="1" Margin="5,5,5,5">
+									<TextBlock Text="{Binding Fcs, StringFormat=ФИО: {0}}"
+											   TextWrapping="Wrap"
+											   Foreground="Black"
+											   FontFamily="Times New Roman"
+											   FontWeight="Bold"/>
+									<TextBlock Text="{Binding Birthdate, StringFormat=Дата рождения: {0}}"
+											   TextWrapping="Wrap"
+											   Foreground="Black"
+											   FontFamily="Times New Roman"
+											   FontWeight="Bold"/>
+									<TextBlock Text="{Binding PhoneNumber, StringFormat=Номер телефона: {0}}"
+											   TextWrapping="Wrap"
+											   Foreground="Black"
+											   FontFamily="Times New Roman"
+											   FontWeight="Bold"/>
+								</StackPanel>
+							</Grid>
+						</Border>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+		</ScrollViewer>
+	</Grid>
+</UserControl>

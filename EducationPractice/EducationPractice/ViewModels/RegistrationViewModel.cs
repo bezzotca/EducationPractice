@@ -37,6 +37,10 @@ namespace EducationPractice.ViewModels
             genders = Db.Genders.ToList();
             activities = Db.ActivitiesLists.ToList();
             directions = Db.Directions.ToList();
+            if(MainWindowViewModel.Instance.PreviousPage == "RegistrationViewModel")
+            {
+                Message = "Успешно";
+            }
         }
 
         public Bitmap GetDefaultImage()
@@ -97,7 +101,7 @@ namespace EducationPractice.ViewModels
                     Console.WriteLine(expert);
                     Db.Experts.Add(expert);
                     Db.SaveChanges();
-
+                    MainWindowViewModel.Instance.PreviousPage = MainWindowViewModel.Instance.PageSwitcher.GetType().Name;
                     MainWindowViewModel.Instance.PageSwitcher = new RegistrationViewModel();
                 }
                else if (Role == "Модератор" && SelectedActivity != null)
@@ -119,6 +123,7 @@ namespace EducationPractice.ViewModels
                     };
                     Db.Moderators.Add(moderator);
                     Db.SaveChanges();
+                    MainWindowViewModel.Instance.PreviousPage = MainWindowViewModel.Instance.PageSwitcher.GetType().Name;
                     MainWindowViewModel.Instance.PageSwitcher = new RegistrationViewModel();
                 }
                 else if (Role == "Модератор" && SelectedActivity == null )
@@ -140,6 +145,7 @@ namespace EducationPractice.ViewModels
                     };
                     Db.Moderators.Add(moderator);
                     Db.SaveChanges();
+                    MainWindowViewModel.Instance.PreviousPage = MainWindowViewModel.Instance.PageSwitcher.GetType().Name;
                     MainWindowViewModel.Instance.PageSwitcher = new RegistrationViewModel();
                 }
             }

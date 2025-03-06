@@ -39,10 +39,16 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/andre/Desktop/Practice4Course/EducationPractice/EducationPractice/Views/EventListView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/andre/Desktop/Practice4Course/EducationPractice/EducationPractice/Views/ExpertView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/andre/Desktop/Practice4Course/EducationPractice/EducationPractice/Views/LoginView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/andre/Desktop/Practice4Course/EducationPractice/EducationPractice/Views/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/andre/Desktop/Practice4Course/EducationPractice/EducationPractice/Views/MembersView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/andre/Desktop/Practice4Course/EducationPractice/EducationPractice/Views/RegistrationView.axaml]

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Avalonia.Media.Imaging;
+using System;
 using System.Collections.Generic;
 
 namespace EducationPractice.Models;
@@ -20,6 +21,8 @@ public partial class Member
     public string Passwd { get; set; } = null!;
 
     public string Image { get; set; } = null!;
+
+    public Bitmap Photo => ConvertToBitmap.ConverterToBitmapMembers(Image);
 
     public int Gender { get; set; }
 

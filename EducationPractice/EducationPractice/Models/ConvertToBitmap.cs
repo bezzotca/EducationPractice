@@ -17,5 +17,12 @@ namespace EducationPractice.Models
             Uri uri = new Uri($"avares://{assemblyName}/Assets/Events_media/{Image}");
             return new Bitmap(AssetLoader.Open(uri));
         }
+
+        public static Bitmap ConverterToBitmapMembers(string Image)
+        {
+            string assemblyName = Assembly.GetExecutingAssembly().GetName().Name;
+            Uri uri = new Uri($"avares://{assemblyName}/Assets/Members_medfia/{Image}");
+            return new Bitmap(AssetLoader.Open(uri));
+        }
     }
 }
