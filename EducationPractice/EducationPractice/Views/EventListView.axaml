@@ -7,7 +7,7 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="EducationPractice.Views.EventListView"
 			 x:DataType="vm:EventListViewModel">
-	<Grid RowDefinitions="100,*">
+	<Grid RowDefinitions="100,Auto">
 		<StackPanel Grid.Row="0"
 					Spacing="10"
 					Orientation="Horizontal">
@@ -19,7 +19,7 @@
 				FontFamily="Times New Roman"
 				FontWeight="Bold"
 				HorizontalContentAlignment="Center"
-				Width="150"
+				Width="130"
 				Height="30"
 				Command="{Binding GoBack}"/>
 			<TextBox Height="50"
@@ -38,6 +38,17 @@
 				<RadioButton Content="Дата начала ближе к началу года" Command="{Binding DataSort}" CommandParameter="1"/>
 				<RadioButton Content="Дата начала ближе к концу года" Command="{Binding DataSort}" CommandParameter="2"/>
 			</StackPanel>
+			<Button
+			Content="Обновить"
+			Margin="20,10,0,0"
+			Background="Green"
+			Foreground="Black"
+			FontFamily="Times New Roman"
+			FontWeight="Bold"
+			HorizontalContentAlignment="Center"
+			Width="100"
+			Height="30"
+			Command="{Binding UpdateButton}"/>
 		</StackPanel>
 		<ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
 			<ListBox ItemsSource="{Binding EventsPlan}" Width="800" Height="450" Background="White">

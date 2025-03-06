@@ -107,7 +107,8 @@
 			Width="250"
 			Height="110"
 			CornerRadius="10"
-			Background="LightGray">
+			Background="LightGray"
+			Command="{Binding GoMembersList}">
 				<TextBlock
 					Text="Учатники"
 					Background="LightGray"
@@ -124,7 +125,8 @@
 			Width="250"
 			Height="110"
 			CornerRadius="10"
-			Background="LightGray">
+			Background="LightGray"
+			Command="{Binding GoExpertsList}">
 				<TextBlock
 					Text="Жюри"
 					Background="LightGray"

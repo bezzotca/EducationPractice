@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Avalonia.Media.Imaging;
+using System;
 using System.Collections.Generic;
 
 namespace EducationPractice.Models;
@@ -24,6 +25,8 @@ public partial class Expert
     public string Passwd { get; set; } = null!;
 
     public string Image { get; set; } = null!;
+
+    public Bitmap Photo => ConvertToBitmap.ConverterToBitmapExperts(Image);
 
     public virtual ICollection<Activity> ActivityExpert1Navigations { get; set; } = new List<Activity>();
 

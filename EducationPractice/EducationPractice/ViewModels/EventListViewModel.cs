@@ -61,5 +61,10 @@ namespace EducationPractice.ViewModels
                     break;
             }
         }
+
+        public void UpdateButton()
+        {
+            MainWindowViewModel.Instance.PageSwitcher = new EventListViewModel();
+        }
     }
 }

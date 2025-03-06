@@ -32,15 +32,17 @@ namespace EducationPractice.ViewModels
         {
             if (Db.Experts.FirstOrDefault(x => x.Email == Login && x.Passwd == Password) != null && ResultMessage == "Капча пройдена!")
             {
-                Message = "*Вы выполнили авторизацию как член жюри*";
+                MainWindowViewModel.Instance.PreviousPage = MainWindowViewModel.Instance.PageSwitcher?.GetType().Name;
+                MainWindowViewModel.Instance.PageSwitcher = new ExpertViewModel();
             }
             else if (Db.Moderators.FirstOrDefault(x => x.Email == Login && x.Passwd == Password) != null && ResultMessage == "Капча пройдена!")
             {
-                Message = "*Вы выполнили авторизацию как модератор*";
+
             }
             else if (Db.Members.FirstOrDefault(x => x.Email == Login && x.Passwd == Password) != null && ResultMessage == "Капча пройдена!")
             {
-                Message = "*Вы выполнили авторизацию как участник*";
+                MainWindowViewModel.Instance.PreviousPage = MainWindowViewModel.Instance.PageSwitcher?.GetType().Name;
+                MainWindowViewModel.Instance.PageSwitcher = new MembersViewModel();
             }
             else if (Db.Arrangers.FirstOrDefault(x => x.Email == Login && x.Passwd == Password) != null && ResultMessage == "Капча пройдена!")
             {

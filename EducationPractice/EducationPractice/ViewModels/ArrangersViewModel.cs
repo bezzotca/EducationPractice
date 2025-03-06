@@ -115,6 +115,18 @@ namespace EducationPractice.ViewModels
         {
             MainWindowViewModel.Instance.PageSwitcher = new RegistrationViewModel();
         }
+
+        public void GoMembersList()
+        {
+            MainWindowViewModel.Instance.PreviousPage = MainWindowViewModel.Instance.PageSwitcher.GetType().Name;
+            MainWindowViewModel.Instance.PageSwitcher = new MembersViewModel();
+        }
+
+        public void GoExpertsList()
+        {
+            MainWindowViewModel.Instance.PreviousPage = MainWindowViewModel.Instance.PageSwitcher.GetType().Name;
+            MainWindowViewModel.Instance.PageSwitcher = new ExpertViewModel();
+        }
     }
 }
 
