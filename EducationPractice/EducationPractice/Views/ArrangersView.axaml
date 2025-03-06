@@ -89,7 +89,8 @@
 			Width="250"
 			Height="110"
 			CornerRadius="10"
-			Background="LightGray">
+			Background="LightGray"
+			Command="{Binding CheckEvents}">
 				<TextBlock
 					Text="Мероприятия"
 					Background="LightGray"

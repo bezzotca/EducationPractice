@@ -104,6 +104,12 @@ namespace EducationPractice.ViewModels
 
             return new Bitmap(AssetLoader.Open(uridefault));
         }
+
+        public void CheckEvents()
+        {
+            MainWindowViewModel.Instance.PreviousPage = MainWindowViewModel.Instance.PageSwitcher.GetType().Name;
+            MainWindowViewModel.Instance.PageSwitcher = new EventListViewModel();
+        }
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Avalonia.Media.Imaging;
+using System;
 using System.Collections.Generic;
 
 namespace EducationPractice.Models;
@@ -16,6 +17,8 @@ public partial class EventsPlan
     public int Idcity { get; set; }
 
     public string? Image { get; set; }
+    
+    public Bitmap Bitmap => ConvertToBitmap.ConverterToBitmap(Image);
 
     public virtual ICollection<Activity> Activities { get; set; } = new List<Activity>();
 

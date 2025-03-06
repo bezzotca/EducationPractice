@@ -30,7 +30,8 @@ namespace EducationPractice.ViewModels
 
         public void GetLogined()
         {
-            
+            MainWindowViewModel.Instance.loginedArranger = Db.Arrangers.FirstOrDefault(x => x.Email == Login && x.Passwd == Password);
+            MainWindowViewModel.Instance.PageSwitcher = new ArrangersViewModel();
             if (Db.Experts.FirstOrDefault(x => x.Email == Login && x.Passwd == Password) != null && ResultMessage == "Капча пройдена!")
             {
                 Message = "*Вы выполнили авторизацию как член жюри*";
@@ -46,8 +47,8 @@ namespace EducationPractice.ViewModels
             else if (Db.Arrangers.FirstOrDefault(x => x.Email == Login && x.Passwd == Password) != null && ResultMessage == "Капча пройдена!")
             {
                 MainWindowViewModel.Instance.loginedArranger = Db.Arrangers.FirstOrDefault(x => x.Email == Login && x.Passwd == Password);
+                MainWindowViewModel.Instance.PreviousPage = MainWindowViewModel.Instance.PageSwitcher?.GetType().Name;
                 MainWindowViewModel.Instance.PageSwitcher = new ArrangersViewModel();
-                
             }
             else if(ResultMessage == "Капча пройдена!")
             {
@@ -148,6 +149,12 @@ namespace EducationPractice.ViewModels
                 }
             }
             return renderTarget;
+        }
+
+        public void CheckEvents()
+        {
+            MainWindowViewModel.Instance.PreviousPage = MainWindowViewModel.Instance.PageSwitcher?.GetType().Name;
+            MainWindowViewModel.Instance.PageSwitcher = new EventListViewModel();
         }
     }
 }
