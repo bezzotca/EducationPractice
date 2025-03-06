@@ -48,5 +48,10 @@ namespace EducationPractice.ViewModels
                 MainWindowViewModel.Instance.PageSwitcher = new ArrangersViewModel();
             }
         }
+
+        public void UpdateButton()
+        {
+            MainWindowViewModel.Instance.PageSwitcher = new MembersViewModel();
+        }
     }
 }

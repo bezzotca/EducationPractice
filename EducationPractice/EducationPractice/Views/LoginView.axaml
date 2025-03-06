@@ -3,77 +3,138 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="1000"
              x:Class="EducationPractice.Views.LoginView"
-			 x:DataType="vm:LoginViewModel">
-	<StackPanel HorizontalAlignment="Center"  VerticalAlignment="Center" Margin="0,100,0,0">
-		<TextBlock Text="Авторизация" FontFamily="Times New Roman" 
-				   FontSize="30" 
-				   FontStyle="Normal"
-				   FontWeight="Bold"
-				   HorizontalAlignment="Center"/>
-		<TextBox Watermark="Введите логин"
-				 Text="{Binding Login}"
-				 Width="200" 
-				 Height="30" 
-				 Margin="0,20,0,0"
-				 FontFamily="Times New Roman"/>
-		<TextBox Watermark="Введите пароль"
-				 Text="{Binding Password}"
-				 Width="200" 
-				 Height="30" 
-				 Margin="0,20,0,0"
-				 PasswordChar="☻"
-				 FontFamily="Times New Roman"/>
-		<StackPanel Spacing="10" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
-			<Image Source="{Binding CaptchaImage}" 
-				   Width="150" 
-				   Height="50"/>
-			<TextBox Text="{Binding UserInput, Mode=TwoWay}" 
-					 Width="150" 
-					 HorizontalAlignment="Center"/>
-			<StackPanel Orientation="Horizontal" Spacing="5">
-				<Button Content="Обновить" 
-						Command="{Binding GenerateCaptchaCommand}"/>
-				<Button Content="Проверить" 
-						Command="{Binding ValidateCaptchaCommand}"/>
+			 x:DataType="vm:LoginViewModel"
+			 Background="#7608AA">
+	<Panel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+		<Border HorizontalAlignment="Center" VerticalAlignment="Center"
+				Margin="0,50,0,0"
+				Background="#BAF46E"
+				CornerRadius="20"
+				BorderThickness="3"
+				BorderBrush="Black"
+				Padding="20">
+			<StackPanel MaxHeight="500" >
+				<TextBlock Text="Авторизация" FontFamily="Times New Roman"
+						   FontSize="30"
+						   FontStyle="Normal"
+						   FontWeight="Bold"
+						   HorizontalAlignment="Center"/>
+				<TextBox Watermark="Введите логин"
+						 Text="{Binding Login}"
+						 Width="200"
+						 Height="30"
+						 Margin="0,20,0,0"
+						 FontFamily="Times New Roman"
+						 CornerRadius="5" 
+						 Background="White" 
+						 Foreground="Black" 
+						 FontWeight="Bold" 
+						 BorderBrush="Black" 
+						 BorderThickness="2"/>
+				<TextBox Watermark="Введите пароль"
+						 Text="{Binding Password}"
+						 Width="200"
+						 Height="30"
+						 Margin="0,20,0,0"
+						 PasswordChar="☻"
+						 FontFamily="Times New Roman" 
+						 Background="White" 
+						 Foreground="Black" 
+						 FontWeight="Bold" 
+						 BorderBrush="Black" 
+						 BorderThickness="2"/>
+				<StackPanel Spacing="10" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
+					<Image Source="{Binding CaptchaImage}"
+						   Width="150"
+						   Height="50"/>
+					<TextBox Text="{Binding UserInput, Mode=TwoWay}"
+							 Width="150"
+							 FontFamily="Times New Roman"
+							 HorizontalAlignment="Center"
+							 Background="White" 
+							 Foreground="Black" 
+							 FontWeight="Bold" 
+							 BorderBrush="Black" 
+							 BorderThickness="2"
+							 IsReadOnly="False"/>
+					<StackPanel Orientation="Horizontal" Spacing="5">
+						<Button Content="Обновить"
+								Command="{Binding GenerateCaptchaCommand}"
+								BorderBrush="Black"
+					BorderThickness="2"
+						Background="#F66F89"
+						FontFamily="Times New Roman"
+						Foreground="Black"
+						FontWeight="Bold"/>
+						<Button Content="Проверить"
+								Command="{Binding ValidateCaptchaCommand}"
+								BorderBrush="Black" 
+					BorderThickness="2" 
+						Background="#F66F89" 
+						FontFamily="Times New Roman" 
+						Foreground="Black" 
+						FontWeight="Bold"/>
+					</StackPanel>
+					<Border BorderBrush="Black"
+							BorderThickness="2"
+							Background="White"
+							Padding="5"
+							HorizontalAlignment="Center"
+							Width="150"
+							CornerRadius="5"
+							Height="30"
+							Margin="0,0,0,10">
+						<TextBlock Text="{Binding ResultMessage}"
+								   Foreground="Red"
+								   FontWeight="Bold"
+								   HorizontalAlignment="Center"/>
+					</Border>
+				</StackPanel>
+				<Button Width="200"
+					Height="30"
+					Content="Авторизоваться"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center"
+					HorizontalContentAlignment="Center"
+					Command="{Binding GetLogined}"
+					BorderBrush="Black" 
+					BorderThickness="2" 
+						Background="#F66F89" 
+						FontFamily="Times New Roman" 
+						Foreground="Black" 
+						FontWeight="Bold"/>
+				<Border BorderBrush="Black"
+							BorderThickness="2"
+							Background="White"
+							Padding="5"
+							HorizontalAlignment="Center"
+							Width="200"
+							CornerRadius="5"
+							Height="50"
+						Margin="0,10,0,0">
+					<TextBlock Text="{Binding Message}"
+							   Foreground="Red"
+							   FontWeight="Bold"
+							   HorizontalAlignment="Center"
+							   TextWrapping="Wrap"/>
+				</Border>
+				<Button Width="200"
+						Height="30"
+						Content="Войти как гость"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						FontWeight="Bold"
+						HorizontalContentAlignment="Center"
+						Margin="0,10,0,50"
+						Command="{Binding CheckEvents}" 
+						BorderBrush="Black" 
+						BorderThickness="2" 
+						Background="#F66F89" 
+						FontFamily="Times New Roman" 
+						Foreground="Black"/>
 			</StackPanel>
-			<TextBlock Text="{Binding ResultMessage}" 
-					   Foreground="Red" 
-					   FontWeight="Bold" 
-					   HorizontalAlignment="Center"/>
-		</StackPanel>
-			<Button Width="200"
-				Height="30"
-				Content="Авторизоваться"
-				FontFamily="Times New Roman"
-				HorizontalAlignment="Center"
-				VerticalAlignment="Center"
-				Background="LightSteelBlue"
-				Foreground="Black"
-				FontWeight="Bold"
-				HorizontalContentAlignment="Center"
-				Command="{Binding GetLogined}"/>
-		<TextBlock
-			FontFamily="Times New Roman"
-			Foreground="Red"
-			Background="LightGray"
-			Margin="0,10,0,0"
-			Width="200"
-			Height="50"
-			Text="{Binding Message}"
-			TextWrapping="Wrap"/>
-		<Button Width="200"
-				Height="30"
-				Content="Войти как гость"
-				FontFamily="Times New Roman"
-				HorizontalAlignment="Center"
-				VerticalAlignment="Center"
-				Background="LightGreen"
-				Foreground="Black"
-				FontWeight="Bold"
-				HorizontalContentAlignment="Center"
-				Margin="0,10,0,0"
-				Command="{Binding CheckEvents}"/>
-	</StackPanel>
+		</Border>
+	</Panel>
 </UserControl>

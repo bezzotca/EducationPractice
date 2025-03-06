@@ -30,6 +30,7 @@ namespace EducationPractice.ViewModels
         [ObservableProperty] ActivitiesList selectedActivity;
         [ObservableProperty] Direction selectedDirection;
         [ObservableProperty] string message;
+        [ObservableProperty] string color;
         public RegistrationViewModel() 
         {
             bitmap = GetDefaultImage();
@@ -37,8 +38,10 @@ namespace EducationPractice.ViewModels
             genders = Db.Genders.ToList();
             activities = Db.ActivitiesLists.ToList();
             directions = Db.Directions.ToList();
+            color = "Red";
             if(MainWindowViewModel.Instance.PreviousPage == "RegistrationViewModel")
             {
+                color = "Green";
                 Message = "Успешно";
             }
         }
@@ -72,11 +75,13 @@ namespace EducationPractice.ViewModels
         {
             if (Id == null || Email == null || Phone_number== null || SelectedGender == null || SelectedDirection == null || SelectedDirection == null || Password == null || Password2 == null || Fcs == null)
             {
+                Color = "Red";
                 Message = "Не все поля заполнены данными";
                 
             }
             else if (Password != Password2)
             {
+                Color = "Red";
                 Message = "Введённые пароли не равны";
                 
             }

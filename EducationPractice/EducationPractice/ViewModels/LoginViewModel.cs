@@ -33,7 +33,7 @@ namespace EducationPractice.ViewModels
             if (Db.Experts.FirstOrDefault(x => x.Email == Login && x.Passwd == Password) != null && ResultMessage == "Капча пройдена!")
             {
                 MainWindowViewModel.Instance.PreviousPage = MainWindowViewModel.Instance.PageSwitcher?.GetType().Name;
-                MainWindowViewModel.Instance.PageSwitcher = new ExpertViewModel();
+                MainWindowViewModel.Instance.PageSwitcher = new EventListViewModel();
             }
             else if (Db.Moderators.FirstOrDefault(x => x.Email == Login && x.Passwd == Password) != null && ResultMessage == "Капча пройдена!")
             {

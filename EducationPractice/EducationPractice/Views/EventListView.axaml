@@ -7,51 +7,80 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="EducationPractice.Views.EventListView"
 			 x:DataType="vm:EventListViewModel">
-	<Grid RowDefinitions="100,Auto">
+
+	<Grid RowDefinitions="100,*" Background="#95EE6B">
 		<StackPanel Grid.Row="0"
 					Spacing="10"
-					Orientation="Horizontal">
+					Orientation="Horizontal"
+					Background="#95EE6B">
 			<Button
 				Content="Вернуться назад"
 				Margin="20,10,0,0"
-				Background="DeepSkyBlue"
-				Foreground="Black"
 				FontFamily="Times New Roman"
 				FontWeight="Bold"
 				HorizontalContentAlignment="Center"
 				Width="130"
 				Height="30"
-				Command="{Binding GoBack}"/>
+				Command="{Binding GoBack}"
+				BorderBrush="Black" 
+					BorderThickness="2" 
+						Background="#F66F89" 
+						Foreground="Black"
+				CornerRadius="5"/>
 			<TextBox Height="50"
 					 Width="250"
 					 Watermark="Фильтрация по названию"
-					 Text="{Binding TextFind}"/>
+					 Text="{Binding TextFind}"
+					  FontFamily="Times New Roman" 
+						 Background="White" 
+						 Foreground="Black" 
+						 FontWeight="Bold" 
+						 BorderBrush="Black" 
+						 BorderThickness="2"/>
 			<StackPanel>
 				<TextBlock
 					Text="Фильтр по количеству дней"
 					Foreground="Black"
 					FontFamily="Times New Roman"
 					FontWeight="Bold"/>
-				<ComboBox ItemsSource="{Binding DaysInEvent}" SelectedItem="{Binding SelectedDay}" SelectedIndex="0"/>
+				<ComboBox ItemsSource="{Binding DaysInEvent}" 
+						  SelectedItem="{Binding SelectedDay}" 
+						  SelectedIndex="0"
+						   FontFamily="Times New Roman" 
+						 Background="White" 
+						 Foreground="Black" 
+						 FontWeight="Bold" 
+						 BorderBrush="Black" 
+						 BorderThickness="2"/>
 			</StackPanel>
 			<StackPanel>
-				<RadioButton Content="Дата начала ближе к началу года" Command="{Binding DataSort}" CommandParameter="1"/>
-				<RadioButton Content="Дата начала ближе к концу года" Command="{Binding DataSort}" CommandParameter="2"/>
+				<RadioButton Content="Дата начала ближе к началу года" 
+							 Command="{Binding DataSort}" 
+							 CommandParameter="1"
+							  Foreground="Black" 
+						 FontWeight="Bold"/>
+				<RadioButton Content="Дата начала ближе к концу года" 
+							 Command="{Binding DataSort}" 
+							 CommandParameter="2"
+							 Foreground="Black" 
+							 FontWeight="Bold"/>
 			</StackPanel>
 			<Button
 			Content="Обновить"
 			Margin="20,10,0,0"
-			Background="Green"
-			Foreground="Black"
-			FontFamily="Times New Roman"
-			FontWeight="Bold"
 			HorizontalContentAlignment="Center"
 			Width="100"
 			Height="30"
-			Command="{Binding UpdateButton}"/>
+			Command="{Binding UpdateButton}"
+			BorderBrush="Black" 
+					BorderThickness="2" 
+						Background="#F66F89" 
+						FontFamily="Times New Roman" 
+						Foreground="Black" 
+						FontWeight="Bold"/>
 		</StackPanel>
-		<ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
-			<ListBox ItemsSource="{Binding EventsPlan}" Width="800" Height="450" Background="White">
+		<ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Background="#FBFE72">
+			<ListBox ItemsSource="{Binding EventsPlan}" Width="800" Height="450" Background="#FBFE72">
 				<ListBox.ItemTemplate>
 					<DataTemplate>
 						<Border BorderBrush="Black" BorderThickness="2" CornerRadius="5" Margin="0,5" Background="LimeGreen">

@@ -6,34 +6,65 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="EducationPractice.Views.RegistrationView"
-			 x:DataType="vm:RegistrationViewModel">
+			 x:DataType="vm:RegistrationViewModel"
+			 Background="#7608AA">
 	<Grid RowDefinitions="50,*">
 		<StackPanel
 			Grid.Row="0">
-			<TextBlock Text="Регистрация модератора или жюри"
+			<TextBlock Text="Регистрация жюри/модератора"
 					   HorizontalAlignment="Center"
-					   FontFamily="Times New Roman"
-					   FontSize="18"
-					   Margin="5"
-					   FontWeight="Bold"/>
+				   FontFamily="Times New Roman"
+				FontWeight="Bold"
+				FontSize="26"
+				Foreground="White"
+					   Margin="5"/>
 		</StackPanel>
 		<StackPanel Grid.Row="1" >
 			<Grid ColumnDefinitions="*,*">
 				<StackPanel Grid.Column="0" VerticalAlignment="Center">
 					<StackPanel Orientation="Horizontal"  Margin="24,10">
-						<TextBlock Text="Id Number"/>
+						<TextBlock Text="Id Number"
+								   FontFamily="Times New Roman"
+					FontWeight="Bold"
+					Foreground="White"/>
 						<TextBox Width="200"
 								 IsReadOnly="True"
-								 Text="{Binding Id}"/>
+								 Text="{Binding Id}"
+								 CornerRadius="5"
+							 Background="White"
+							 Foreground="Black"
+							 FontWeight="Bold"
+							 BorderBrush="Black"
+							 BorderThickness="2"/>
 					</StackPanel>
 					<StackPanel Orientation="Horizontal" Margin="54,0">
-						<TextBlock Text="ФИО :"/>
+						<TextBlock Text="ФИО :"
+								   FontFamily="Times New Roman"
+					FontWeight="Bold"
+					Foreground="White"/>
 						<TextBox Width="200"
-								 Text="{Binding Fcs}"/>
+								 Text="{Binding Fcs}"
+								 CornerRadius="5"
+							 Background="White"
+							 Foreground="Black"
+							 FontWeight="Bold"
+							 BorderBrush="Black"
+							 BorderThickness="2"/>
 					</StackPanel>
 					<StackPanel Orientation="Horizontal" Margin="61,10">
-						<TextBlock Text="Пол :"/>
-						<ComboBox Width="200" ItemsSource="{Binding Genders}" SelectedItem="{Binding SelectedGender}">
+						<TextBlock Text="Пол :"
+								   FontFamily="Times New Roman"
+					FontWeight="Bold"
+					Foreground="White"/>
+						<ComboBox Width="200" 
+								  ItemsSource="{Binding Genders}" 
+								  SelectedItem="{Binding SelectedGender}"
+								  CornerRadius="5"
+							 Background="White"
+							 Foreground="Black"
+							 FontWeight="Bold"
+							 BorderBrush="Black"
+							 BorderThickness="2">
 							<ComboBox.ItemTemplate>
 								<DataTemplate>
 									<TextBlock Text="{Binding Gender1}"/>
@@ -42,25 +73,63 @@
 						</ComboBox>
 					</StackPanel>
 					<StackPanel Orientation="Horizontal" Margin="55,0">
-						<TextBlock Text="Роль :"/>
-						<ComboBox Width="200" ItemsSource="{Binding Roles}" SelectedItem="{Binding Role}"/>
+						<TextBlock Text="Роль :"
+								   FontFamily="Times New Roman"
+					FontWeight="Bold"
+					Foreground="White"/>
+						<ComboBox Width="200" 
+								  ItemsSource="{Binding Roles}" 
+								  SelectedItem="{Binding Role}"
+								  CornerRadius="5"
+							 Background="White"
+							 Foreground="Black"
+							 FontWeight="Bold"
+							 BorderBrush="Black"
+							 BorderThickness="2"/>
 					</StackPanel>
 					<StackPanel Orientation="Horizontal" Margin="54,10">
-						<TextBlock Text="Email :"/>
+						<TextBlock Text="Email :"
+								   FontFamily="Times New Roman"
+					FontWeight="Bold"
+					Foreground="White"/>
 						<TextBox Width="200"
-								 Text="{Binding Email}"/>
+								 Text="{Binding Email}"
+								 CornerRadius="5"
+							 Background="White"
+							 Foreground="Black"
+							 FontWeight="Bold"
+							 BorderBrush="Black"
+							 BorderThickness="2"/>
 					</StackPanel>
 					<StackPanel Orientation="Horizontal" Margin="32,0,0,10">
-						<TextBlock Text="Телефон :"/>
+						<TextBlock Text="Телефон :"
+								   FontFamily="Times New Roman"
+					FontWeight="Bold"
+					Foreground="White"/>
 						<TextBox Width="200"
-								 Text="{Binding Phone_number}"/>
+								 Text="{Binding Phone_number}"
+								 CornerRadius="5"
+							 Background="White"
+							 Foreground="Black"
+							 FontWeight="Bold"
+							 BorderBrush="Black"
+							 BorderThickness="2"/>
 					</StackPanel>
 					<StackPanel Orientation="Horizontal" Margin="0,0,10,0">
-						<TextBlock Text="Направление :"/>
+						<TextBlock Text="Направление :"
+								   FontFamily="Times New Roman"
+					FontWeight="Bold"
+					Foreground="White"/>
 						<ComboBox Width="200"
 								  ItemsSource="{Binding Directions}"
 								  SelectedIndex="0"
-								  SelectedItem="{Binding SelectedDirection}">
+								  SelectedItem="{Binding SelectedDirection}"
+								  CornerRadius="5"
+							 Background="White"
+							 Foreground="Black"
+							 FontWeight="Bold"
+							 BorderBrush="Black"
+							 BorderThickness="2">
 							<ComboBox.ItemTemplate>
 								<DataTemplate>
 									<TextBlock Text="{Binding NameDirection}"/>
@@ -73,16 +142,27 @@
 								  Visual.FlowDirection="LeftToRight" 
 								  Margin="0,0"
 								  FontSize="13"
-								  Name="cb1"/>
+								  Name="cb1"
+							 Foreground="White"
+							 FontWeight="Bold"/>
 					</StackPanel>
 					<StackPanel Orientation="Horizontal" Margin="2,0">
 						<TextBlock Text="Мероприятие :"
-								   IsVisible="{Binding #cb1.IsChecked}"/>
+								   IsVisible="{Binding #cb1.IsChecked}"
+								   FontFamily="Times New Roman"
+					FontWeight="Bold"
+					Foreground="White"/>
 						<ComboBox Width="200"
 								  IsVisible="{Binding #cb1.IsChecked}"
 								  ItemsSource="{Binding Activities}"
 								  SelectedIndex="0"
-								  SelectedItem="{Binding SelectedActivity}">
+								  SelectedItem="{Binding SelectedActivity}"
+								  CornerRadius="5"
+							 Background="White"
+							 Foreground="Black"
+							 FontWeight="Bold"
+							 BorderBrush="Black"
+							 BorderThickness="2">
 							<ComboBox.ItemTemplate>
 								<DataTemplate>
 									<TextBlock Text="{Binding NameActivity}"/>
@@ -96,43 +176,89 @@
 						   Width="100"
 						   Height="150"/>
 					<StackPanel Orientation="Horizontal" Margin="52,0,0,10">
-						<TextBlock Text="Пароль :"/>
+						<TextBlock Text="Пароль :"
+								   FontFamily="Times New Roman"
+					FontWeight="Bold"
+					Foreground="White"/>
 						<TextBox Width="200"
 								 Watermark="Password"
-								 Text="{Binding Password}"/>
+								 Text="{Binding Password}"
+								 CornerRadius="5"
+							 Background="White"
+							 Foreground="Black"
+							 FontWeight="Bold"
+							 BorderBrush="Black"
+							 BorderThickness="2"/>
 					</StackPanel>
 					<StackPanel Orientation="Horizontal" Margin="0,0,10,0">
-						<TextBlock Text="Повтор пароля :"/>
+						<TextBlock Text="Повтор пароля :"
+								   FontFamily="Times New Roman"
+					FontWeight="Bold"
+					Foreground="White"/>
 						<TextBox Width="200"
 								 Watermark="Re-enter password"
-								 Text="{Binding Password2}"/>
+								 Text="{Binding Password2}"
+								 CornerRadius="5"
+							 Background="White"
+							 Foreground="Black"
+							 FontWeight="Bold"
+							 BorderBrush="Black"
+							 BorderThickness="2"/>
 					</StackPanel>
 					<StackPanel Orientation="Horizontal" Margin="100,10,10,10">
 						<CheckBox Content="Пароли видны"
 								  Visual.FlowDirection="LeftToRight"
 								  Margin="0,0"
 								  FontSize="13"
-								  Name="cb2"/>
+								  Name="cb2"
+								  CornerRadius="5"
+							 Foreground="White"
+							 FontWeight="Bold"/>
 					</StackPanel>
 					<StackPanel Orientation="Horizontal" Margin="2,0" Spacing="30">
 						<Button Width="120" 
 								Height="35"
 								Content="Регистрация"
 								HorizontalContentAlignment="Center"
-								Command="{Binding Register}"/>
+								Command="{Binding Register}"
+								FontFamily="Times New Roman"
+							 Background="#F66F89"
+							 Foreground="Black"
+							 FontWeight="Bold"
+							 BorderBrush="Black"
+							 BorderThickness="2"/>
 						<Button Width="120" 
 								Height="35"
 								Content="Отмена"
 								HorizontalContentAlignment="Center"
-								Command="{Binding GoBack}"/>
+								Command="{Binding GoBack}"
+								FontFamily="Times New Roman"
+							 Background="#F66F89"
+							 Foreground="Black"
+							 FontWeight="Bold"
+							 BorderBrush="Black"
+							 BorderThickness="2"/>
 					</StackPanel>
-					<TextBlock Text="{Binding Message}"
-							   FontFamily="Times New Roman"
-							   FontSize="14"
-							   Margin="10,10"
-							   FontStyle="Normal"
-							   FontWeight="Bold"
-							   Foreground="Red"/>
+					<TextBlock Text="Окно вывода результата действий"
+								   Foreground="White"
+								   FontWeight="Bold"
+								   HorizontalAlignment="Center"
+								   TextWrapping="Wrap"/>
+					<Border BorderBrush="Black"
+							BorderThickness="2"
+							Background="White"
+							Padding="5"
+							HorizontalAlignment="Center"
+							Width="200"
+							CornerRadius="5"
+							Height="50"
+						Margin="0,10,0,0">
+						<TextBlock Text="{Binding Message}"
+								   Foreground="{Binding Color}"
+								   FontWeight="Bold"
+								   HorizontalAlignment="Center"
+								   TextWrapping="Wrap"/>
+					</Border>
 				</StackPanel>
 			</Grid>
 		</StackPanel>
