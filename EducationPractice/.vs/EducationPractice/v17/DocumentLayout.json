@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D777270D-FE40-422B-A5E5-57966D7104EE}|EducationPractice\\EducationPractice.csproj|c:\\users\\andre\\desktop\\practice4course\\educationpractice\\educationpractice\\views\\eventlistview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{D777270D-FE40-422B-A5E5-57966D7104EE}|EducationPractice\\EducationPractice.csproj|solutionrelative:educationpractice\\views\\eventlistview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+      "AbsoluteMoniker": "D:0:0:{D777270D-FE40-422B-A5E5-57966D7104EE}|EducationPractice\\EducationPractice.csproj|c:\\users\\andre\\desktop\\practice4course\\educationpractice\\educationpractice\\viewmodels\\arrangerprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D777270D-FE40-422B-A5E5-57966D7104EE}|EducationPractice\\EducationPractice.csproj|solutionrelative:educationpractice\\viewmodels\\arrangerprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D777270D-FE40-422B-A5E5-57966D7104EE}|EducationPractice\\EducationPractice.csproj|c:\\users\\andre\\desktop\\practice4course\\educationpractice\\educationpractice\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D777270D-FE40-422B-A5E5-57966D7104EE}|EducationPractice\\EducationPractice.csproj|solutionrelative:educationpractice\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D777270D-FE40-422B-A5E5-57966D7104EE}|EducationPractice\\EducationPractice.csproj|c:\\users\\andre\\desktop\\practice4course\\educationpractice\\educationpractice\\views\\expertview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
@@ -13,6 +17,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{D777270D-FE40-422B-A5E5-57966D7104EE}|EducationPractice\\EducationPractice.csproj|c:\\users\\andre\\desktop\\practice4course\\educationpractice\\educationpractice\\views\\membersview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
       "RelativeMoniker": "D:0:0:{D777270D-FE40-422B-A5E5-57966D7104EE}|EducationPractice\\EducationPractice.csproj|solutionrelative:educationpractice\\views\\membersview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D777270D-FE40-422B-A5E5-57966D7104EE}|EducationPractice\\EducationPractice.csproj|c:\\users\\andre\\desktop\\practice4course\\educationpractice\\educationpractice\\views\\eventlistview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{D777270D-FE40-422B-A5E5-57966D7104EE}|EducationPractice\\EducationPractice.csproj|solutionrelative:educationpractice\\views\\eventlistview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D777270D-FE40-422B-A5E5-57966D7104EE}|EducationPractice\\EducationPractice.csproj|c:\\users\\andre\\desktop\\practice4course\\educationpractice\\educationpractice\\models\\converttobitmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D777270D-FE40-422B-A5E5-57966D7104EE}|EducationPractice\\EducationPractice.csproj|solutionrelative:educationpractice\\models\\converttobitmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,38 +43,72 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EventListView.axaml",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\EducationPractice\\Views\\EventListView.axaml",
-              "RelativeDocumentMoniker": "EducationPractice\\Views\\EventListView.axaml",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\EducationPractice\\Views\\EventListView.axaml",
-              "RelativeToolTip": "EducationPractice\\Views\\EventListView.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-07T06:34:24.392Z",
+              "Title": "ArrangerProfileViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\EducationPractice\\ViewModels\\ArrangerProfileViewModel.cs",
+              "RelativeDocumentMoniker": "EducationPractice\\ViewModels\\ArrangerProfileViewModel.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\EducationPractice\\ViewModels\\ArrangerProfileViewModel.cs",
+              "RelativeToolTip": "EducationPractice\\ViewModels\\ArrangerProfileViewModel.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAuwCQAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T07:43:21.597Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ExpertView.axaml",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\EducationPractice\\Views\\ExpertView.axaml",
-              "RelativeDocumentMoniker": "EducationPractice\\Views\\ExpertView.axaml",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\EducationPractice\\Views\\ExpertView.axaml",
-              "RelativeToolTip": "EducationPractice\\Views\\ExpertView.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-07T06:32:59.838Z",
-              "EditorCaption": ""
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\EducationPractice\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "EducationPractice\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\EducationPractice\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "EducationPractice\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAswCUAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T07:27:10.022Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MembersView.axaml",
               "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\EducationPractice\\Views\\MembersView.axaml",
               "RelativeDocumentMoniker": "EducationPractice\\Views\\MembersView.axaml",
               "ToolTip": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\EducationPractice\\Views\\MembersView.axaml",
               "RelativeToolTip": "EducationPractice\\Views\\MembersView.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-07T06:31:45.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T07:26:32.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ConvertToBitmap.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\EducationPractice\\Models\\ConvertToBitmap.cs",
+              "RelativeDocumentMoniker": "EducationPractice\\Models\\ConvertToBitmap.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\EducationPractice\\Models\\ConvertToBitmap.cs",
+              "RelativeToolTip": "EducationPractice\\Models\\ConvertToBitmap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T07:23:55.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExpertView.axaml",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\EducationPractice\\Views\\ExpertView.axaml",
+              "RelativeDocumentMoniker": "EducationPractice\\Views\\ExpertView.axaml",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\EducationPractice\\Views\\ExpertView.axaml",
+              "RelativeToolTip": "EducationPractice\\Views\\ExpertView.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-07T07:22:57.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EventListView.axaml",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\EducationPractice\\Views\\EventListView.axaml",
+              "RelativeDocumentMoniker": "EducationPractice\\Views\\EventListView.axaml",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\Practice4Course\\EducationPractice\\EducationPractice\\Views\\EventListView.axaml",
+              "RelativeToolTip": "EducationPractice\\Views\\EventListView.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-07T07:20:48.707Z"
             }
           ]
         }

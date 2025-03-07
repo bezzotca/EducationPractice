@@ -4,21 +4,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="1500" d:DesignHeight="1500"
              x:Class="EducationPractice.Views.EventListView"
 			 x:DataType="vm:EventListViewModel"
-			 Background="#95EE6B">
+			 Background="#FBFE72">
 
-	<Grid RowDefinitions="1,*">
-		<TextBlock Grid.Row="0"
-			Text="Члены жюри"
+	<Grid RowDefinitions="1,*" Background="#95EE6B">
+		<TextBlock Grid.Row="0" 
+			Text="Мероприятия"
 					FontFamily="Times New Roman"
 					FontWeight="Bold"
 					FontSize="26"
 					Foreground="Black"
 					Width="300"
 					Height="30"
-					Margin="0,20"/>
+					Margin="0,20" />
 		<Grid RowDefinitions="100,*" Background="#95EE6B" Grid.Row="1">
 			<StackPanel Grid.Row="0"
 						Spacing="10"
@@ -90,7 +90,7 @@
 							Foreground="Black"
 							FontWeight="Bold"/>
 			</StackPanel>
-			<StackPanel Grid.Row="1">
+			<StackPanel Grid.Row="1" Background="#FBFE72">
 				<TextBlock
 						Text="{Binding Message}"
 						Foreground="Red"

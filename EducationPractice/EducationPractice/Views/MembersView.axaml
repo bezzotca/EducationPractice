@@ -72,7 +72,7 @@
 							Foreground="Black"
 							FontWeight="Bold"/>
 			</StackPanel>
-			<StackPanel Grid.Row="1">
+			<StackPanel Grid.Row="1" Background="#FBFE72">
 				<TextBlock
 						Text="{Binding Message}"
 						Foreground="Red"

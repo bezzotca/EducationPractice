@@ -4,11 +4,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="1000"
              x:Class="EducationPractice.Views.ExpertView"
 			  x:DataType="vm:ExpertViewModel"
-			 Background="#95EE6B">
-	<Grid RowDefinitions="1,*">
+			 Background="#FBFE72">
+	<Grid RowDefinitions="1,* " Background="#95EE6B">
 		<TextBlock Grid.Row="0"
 			Text="Члены жюри"
 					FontFamily="Times New Roman"
@@ -73,7 +73,7 @@
 							Foreground="Black"
 							FontWeight="Bold"/>
 			</StackPanel>
-			<StackPanel Grid.Row="1">
+			<StackPanel Grid.Row="1" Background="#FBFE72">
 				<TextBlock
 						Text="{Binding Message}"
 						Foreground="Red"

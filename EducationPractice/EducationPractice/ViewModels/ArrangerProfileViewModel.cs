@@ -31,8 +31,11 @@ namespace EducationPractice.ViewModels
             MainWindowViewModel.Instance.PageSwitcher = new ArrangersViewModel();
         }
 
-        public void Save() => Db.SaveChanges();
-
+        public void Save()
+        {
+            Db.SaveChanges();
+            MainWindowViewModel.Instance.PageSwitcher = new ArrangerProfileViewModel();
+        }
         public DateTimeOffset DateTime
         {
             get => new DateTimeOffset(arrangerProfile.Birthdate, TimeOnly.MinValue, TimeSpan.Zero);
