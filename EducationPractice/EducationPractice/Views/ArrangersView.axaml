@@ -8,72 +8,69 @@
 			 x:DataType="vm:ArrangersViewModel"
 			 Background="#7608AA">
 	
-	<Grid ColumnDefinitions="150,*,*" >
-		<StackPanel
-			Grid.Column="0">
-			<Button
-			Content="Вернуться назад"
-			VerticalAlignment="Top"
-			Margin="20,10,0,0"
-			FontFamily="Times New Roman"
-				FontWeight="Bold"
-				HorizontalContentAlignment="Center"
-				Width="130"
-				Height="30"
-				Command="{Binding GoBack}"
-				BorderBrush="Black"
-					BorderThickness="2"
-						Background="#F66F89"
-						Foreground="Black"
-				CornerRadius="5"/>
-			<Image Source="{Binding Photo}" 
-				   Width="150" 
-				   Height="250"
-				   Margin="0,100,0,0"/>
-		<Button
-			Margin="20,60,0,0"
-			Width="150"
-			Height="90"
-			Command="{Binding WatchProfile}"
-			 FontFamily="Times New Roman" 
-						 Background="#F66F89" 
-						 Foreground="Black" 
-						 FontWeight="Bold" 
-						 BorderBrush="Black" 
-						 BorderThickness="2">
-			<TextBlock
-				Text="Мой профиль"
-				Background="#F66F89"
-				FontFamily="Times New Roman"
-				FontWeight="Bold"
-				Foreground="Black"
-				FontSize="24"
-				TextWrapping="Wrap"
-				TextAlignment="Center"
-				VerticalAlignment="Center"
-				HorizontalAlignment="Center"/>
-		</Button>
-		</StackPanel>
-		<StackPanel
-			Grid.Column="1"
-			VerticalAlignment="Center"
-			HorizontalAlignment="Center"
-			Spacing="20">
-			<TextBlock
-				Text="{Binding HelloMessage}"
-				FontFamily="Times New Roman"
-				FontWeight="Bold"
-				Foreground="White"
-				FontSize="24"
-				TextWrapping="Wrap"
-				TextAlignment="Center"
-				VerticalAlignment="Center"
-				HorizontalAlignment="Center"/>
+	<Grid RowDefinitions="50,*">
+		<TextBlock Grid.Row="0"
+			Text="Окно организатора"
+					FontFamily="Times New Roman"
+					FontWeight="Bold"
+					FontSize="26"
+					Foreground="White"
+					Width="300"
+					Height="30"
+					Margin="0,20"/>
+		<Grid ColumnDefinitions="150,*,*" Grid.Row="1" >
 			<StackPanel
-				Orientation="Horizontal"
+				Grid.Column="0">
+				<Button
+				Content="Вернуться назад"
+				VerticalAlignment="Top"
+				Margin="20,10,0,0"
+				FontFamily="Times New Roman"
+					FontWeight="Bold"
+					HorizontalContentAlignment="Center"
+					Width="130"
+					Height="30"
+					Command="{Binding GoBack}"
+					BorderBrush="Black"
+						BorderThickness="2"
+							Background="#F66F89"
+							Foreground="Black"
+					CornerRadius="5"/>
+				<Image Source="{Binding Photo}"
+					   Width="150"
+					   Height="250"
+					   Margin="0,100,0,0"/>
+				<Button
+					Margin="20,60,0,0"
+					Width="150"
+					Height="90"
+					Command="{Binding WatchProfile}"
+					 FontFamily="Times New Roman"
+								 Background="#F66F89"
+								 Foreground="Black"
+								 FontWeight="Bold"
+								 BorderBrush="Black"
+								 BorderThickness="2">
+					<TextBlock
+						Text="Мой профиль"
+						Background="#F66F89"
+						FontFamily="Times New Roman"
+						FontWeight="Bold"
+						Foreground="Black"
+						FontSize="24"
+						TextWrapping="Wrap"
+						TextAlignment="Center"
+						VerticalAlignment="Center"
+						HorizontalAlignment="Center"/>
+				</Button>
+			</StackPanel>
+			<StackPanel
+				Grid.Column="1"
+				VerticalAlignment="Center"
+				HorizontalAlignment="Center"
 				Spacing="20">
 				<TextBlock
-					Text="{Binding MrMrs}"
+					Text="{Binding HelloMessage}"
 					FontFamily="Times New Roman"
 					FontWeight="Bold"
 					Foreground="White"
@@ -82,110 +79,125 @@
 					TextAlignment="Center"
 					VerticalAlignment="Center"
 					HorizontalAlignment="Center"/>
-				<TextBlock
-					Text="{Binding FirstName}"
-					FontFamily="Times New Roman"
-					FontWeight="Bold"
-					Foreground="White"
-					FontSize="24"
-					TextWrapping="Wrap"
-					TextAlignment="Center"
-					VerticalAlignment="Center"
-					HorizontalAlignment="Center"/>
+				<StackPanel
+					Orientation="Horizontal"
+					Spacing="20">
+					<TextBlock
+						Text="{Binding MrMrs}"
+						FontFamily="Times New Roman"
+						FontWeight="Bold"
+						Foreground="White"
+						FontSize="24"
+						TextWrapping="Wrap"
+						TextAlignment="Center"
+						VerticalAlignment="Center"
+						HorizontalAlignment="Center"/>
+					<TextBlock
+						Text="{Binding FirstName}"
+						FontFamily="Times New Roman"
+						FontWeight="Bold"
+						Foreground="White"
+						FontSize="24"
+						TextWrapping="Wrap"
+						TextAlignment="Center"
+						VerticalAlignment="Center"
+						HorizontalAlignment="Center"/>
+				</StackPanel>
+				<Button
+				Width="250"
+				Height="110"
+				Command="{Binding CheckEvents}"
+				BorderBrush="Black"
+						BorderThickness="2"
+							Background="#F66F89"
+							FontFamily="Times New Roman"
+							Foreground="Black"
+							FontWeight="Bold">
+					<TextBlock
+						Text="Мероприятия"
+						Background="#F66F89"
+						FontFamily="Times New Roman"
+						FontWeight="Bold"
+						Foreground="Black"
+						FontSize="24"
+						TextWrapping="Wrap"
+						TextAlignment="Center"
+						VerticalAlignment="Center"
+						HorizontalAlignment="Center"/>
+				</Button>
+				<Button
+				Width="250"
+				Height="110"
+				Command="{Binding GoMembersList}"
+				BorderBrush="Black"
+						BorderThickness="2"
+							Background="#F66F89"
+							FontFamily="Times New Roman"
+							Foreground="Black"
+							FontWeight="Bold">
+					<TextBlock
+						Text="Учаcтники"
+						Background="#F66F89"
+						FontFamily="Times New Roman"
+						FontWeight="Bold"
+						Foreground="Black"
+						FontSize="24"
+						TextWrapping="Wrap"
+						TextAlignment="Center"
+						VerticalAlignment="Center"
+						HorizontalAlignment="Center"/>
+				</Button>
+				<Button
+				Width="250"
+				Height="110"
+				Command="{Binding GoExpertsList}"
+				CornerRadius="10"
+				 FontFamily="Times New Roman"
+							 Background="#F66F89"
+							 Foreground="Black"
+							 FontWeight="Bold"
+							 BorderBrush="Black"
+							 BorderThickness="2">
+					<TextBlock
+						Text="Жюри"
+						Background="#F66F89"
+						FontFamily="Times New Roman"
+						FontWeight="Bold"
+						Foreground="Black"
+						FontSize="24"
+						TextWrapping="Wrap"
+						TextAlignment="Center"
+						VerticalAlignment="Center"
+						HorizontalAlignment="Center"/>
+				</Button>
 			</StackPanel>
-			<Button
-			Width="250"
-			Height="110"
-			Command="{Binding CheckEvents}"
-			BorderBrush="Black"
-					BorderThickness="2"
+			<StackPanel Grid.Column="2"
+						VerticalAlignment="Center">
+				<Button
+				Width="250"
+				Height="110"
+				Command="{Binding GoRegistration}"
+				CornerRadius="10"
+				 FontFamily="Times New Roman"
+							 Background="#F66F89"
+							 Foreground="Black"
+							 FontWeight="Bold"
+							 BorderBrush="Black"
+							 BorderThickness="2">
+					<TextBlock
+						Text="Регистрация"
 						Background="#F66F89"
 						FontFamily="Times New Roman"
+						FontWeight="Bold"
 						Foreground="Black"
-						FontWeight="Bold">
-				<TextBlock
-					Text="Мероприятия"
-					Background="#F66F89"
-					FontFamily="Times New Roman"
-					FontWeight="Bold"
-					Foreground="Black"
-					FontSize="24"
-					TextWrapping="Wrap"
-					TextAlignment="Center"
-					VerticalAlignment="Center"
-					HorizontalAlignment="Center"/>
-			</Button>
-			<Button
-			Width="250"
-			Height="110"
-			Command="{Binding GoMembersList}"
-			BorderBrush="Black"
-					BorderThickness="2"
-						Background="#F66F89"
-						FontFamily="Times New Roman"
-						Foreground="Black"
-						FontWeight="Bold">
-				<TextBlock
-					Text="Учаcтники"
-					Background="#F66F89"
-					FontFamily="Times New Roman"
-					FontWeight="Bold"
-					Foreground="Black"
-					FontSize="24"
-					TextWrapping="Wrap"
-					TextAlignment="Center"
-					VerticalAlignment="Center"
-					HorizontalAlignment="Center"/>
-			</Button>
-			<Button
-			Width="250"
-			Height="110"
-			Command="{Binding GoExpertsList}"
-			CornerRadius="10"
-			 FontFamily="Times New Roman"
-						 Background="#F66F89"
-						 Foreground="Black"
-						 FontWeight="Bold"
-						 BorderBrush="Black"
-						 BorderThickness="2">
-				<TextBlock
-					Text="Жюри"
-					Background="#F66F89"
-					FontFamily="Times New Roman"
-					FontWeight="Bold"
-					Foreground="Black"
-					FontSize="24"
-					TextWrapping="Wrap"
-					TextAlignment="Center"
-					VerticalAlignment="Center"
-					HorizontalAlignment="Center"/>
-			</Button>
-		</StackPanel>
-		<StackPanel Grid.Column="2"
-					VerticalAlignment="Center">
-			<Button
-			Width="250"
-			Height="110"
-			Command="{Binding GoRegistration}"
-			CornerRadius="10"
-			 FontFamily="Times New Roman" 
-						 Background="#F66F89" 
-						 Foreground="Black" 
-						 FontWeight="Bold" 
-						 BorderBrush="Black" 
-						 BorderThickness="2">
-				<TextBlock
-					Text="Регистрация"
-					Background="#F66F89"
-					FontFamily="Times New Roman"
-					FontWeight="Bold"
-					Foreground="Black"
-					FontSize="24"
-					TextWrapping="Wrap"
-					TextAlignment="Center"
-					VerticalAlignment="Center"
-					HorizontalAlignment="Center"/>
-			</Button>
-		</StackPanel>
+						FontSize="24"
+						TextWrapping="Wrap"
+						TextAlignment="Center"
+						VerticalAlignment="Center"
+						HorizontalAlignment="Center"/>
+				</Button>
+			</StackPanel>
+		</Grid>
 	</Grid>
+	
 </UserControl>

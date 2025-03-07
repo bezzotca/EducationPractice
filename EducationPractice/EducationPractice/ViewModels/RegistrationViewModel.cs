@@ -1,4 +1,5 @@
-﻿using Avalonia.Media.Imaging;
+﻿using Avalonia.Controls;
+using Avalonia.Media.Imaging;
 using Avalonia.Platform;
 using CommunityToolkit.Mvvm.ComponentModel;
 using EducationPractice.Models;
@@ -7,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace EducationPractice.ViewModels
@@ -23,7 +25,7 @@ namespace EducationPractice.ViewModels
         [ObservableProperty] Gender selectedGender;
         [ObservableProperty] string role;
         [ObservableProperty] string fcs;
-        [ObservableProperty] string phone_number;
+        [ObservableProperty] private string phone_number;
         [ObservableProperty] string email;
         [ObservableProperty] string password;
         [ObservableProperty] string password2;
@@ -31,7 +33,7 @@ namespace EducationPractice.ViewModels
         [ObservableProperty] Direction selectedDirection;
         [ObservableProperty] string message;
         [ObservableProperty] string color;
-        public RegistrationViewModel() 
+        public RegistrationViewModel()
         {
             bitmap = GetDefaultImage();
             roles = ["Жюри", "Модератор"];
@@ -39,7 +41,7 @@ namespace EducationPractice.ViewModels
             activities = Db.ActivitiesLists.ToList();
             directions = Db.Directions.ToList();
             color = "Red";
-            if(MainWindowViewModel.Instance.PreviousPage == "RegistrationViewModel")
+            if (MainWindowViewModel.Instance.PreviousPage == "RegistrationViewModel")
             {
                 color = "Green";
                 Message = "Успешно";
@@ -70,6 +72,34 @@ namespace EducationPractice.ViewModels
                     break;
             }
         }
+        bool IsPasswordValid()
+        {
+
+            if (Password.Length < 6)
+                return false;
+
+            bool hasUpperCase = false;
+            bool hasLowerCase = false;
+            bool hasDigit = false;
+            bool hasSpecialChar = false;
+
+            foreach (char c in Password)
+            {
+                if (char.IsUpper(c)) hasUpperCase = true;
+                if (char.IsLower(c)) hasLowerCase = true;
+                if (char.IsDigit(c)) hasDigit = true;
+                if (Regex.IsMatch(c.ToString(), @"[\W_]")) hasSpecialChar = true; 
+            }
+
+            return hasUpperCase && hasLowerCase && hasDigit && hasSpecialChar;
+        }
+
+        bool IsEmailValid()
+        {
+            string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+
+            return Regex.IsMatch(Email, emailPattern);
+        }
 
         public void Register()
         {
@@ -77,17 +107,17 @@ namespace EducationPractice.ViewModels
             {
                 Color = "Red";
                 Message = "Не все поля заполнены данными";
-                
+
             }
             else if (Password != Password2)
             {
                 Color = "Red";
                 Message = "Введённые пароли не равны";
-                
+
             }
             else
             {
-               if(Role == "Жюри")
+                if (Role == "Жюри")
                 {
                     Random random = new Random();
                     Expert expert = new Expert()
@@ -109,7 +139,16 @@ namespace EducationPractice.ViewModels
                     MainWindowViewModel.Instance.PreviousPage = MainWindowViewModel.Instance.PageSwitcher.GetType().Name;
                     MainWindowViewModel.Instance.PageSwitcher = new RegistrationViewModel();
                 }
-               else if (Role == "Модератор" && SelectedActivity != null)
+                else if(!IsPasswordValid())
+                {
+                    Color = "Red";
+                    Message = "Введён слишком лёгкий пароль";
+                }else if(!IsEmailValid())
+                {
+                    Color = "Red";
+                    Message = "Некорректно введена почта";
+                }
+                else if (Role == "Модератор" && SelectedActivity != null && IsEmailValid() && IsPasswordValid())
                 {
                     Random random = new Random();
                     Moderator moderator = new Moderator()
@@ -131,7 +170,7 @@ namespace EducationPractice.ViewModels
                     MainWindowViewModel.Instance.PreviousPage = MainWindowViewModel.Instance.PageSwitcher.GetType().Name;
                     MainWindowViewModel.Instance.PageSwitcher = new RegistrationViewModel();
                 }
-                else if (Role == "Модератор" && SelectedActivity == null )
+                else if (Role == "Модератор" && SelectedActivity == null && IsEmailValid() && IsPasswordValid())
                 {
                     Random random = new Random();
                     Moderator moderator = new Moderator()
@@ -157,5 +196,6 @@ namespace EducationPractice.ViewModels
 
 
         }
+
     }
 }

@@ -10,4 +10,12 @@ public partial class RegistrationView : UserControl
     {
         InitializeComponent();
     }
+
+    private void Binding(object? sender, Avalonia.Controls.TextChangedEventArgs e)
+    {
+    }
+
+    private void Binding(object? sender, Avalonia.Input.KeyEventArgs e)
+    {
+    }
 }

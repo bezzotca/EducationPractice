@@ -13,6 +13,7 @@ namespace EducationPractice.ViewModels
         [ObservableProperty] List<Member> members;
         [ObservableProperty] List<Member> members0;
         [ObservableProperty] string textFind;
+        [ObservableProperty] string message;
         public MembersViewModel()
         {
             members = Db.Members.ToList();
@@ -21,19 +22,33 @@ namespace EducationPractice.ViewModels
 
         partial void OnTextFindChanged(string value)
         {
+            Message = string.Empty;
             Members = members0;
             Members = Members.Where(x => x.Fcs.Contains(value)).ToList();
+            if(!Members.Any())
+            {
+                Message = "По вашему запросу результатов нет";
+            }
         }
 
         public void DataSort(int sortOrder)
         {
+            Message = string.Empty;
             switch (sortOrder)
             {
                 case 1:
                     Members = Members.OrderBy(x => x.Birthdate).ToList();
+                    if (!Members.Any())
+                    {
+                        Message = "По вашему запросу результатов нет";
+                    }
                     break;
                 case 2:
                     Members = Members.OrderByDescending(x => x.Birthdate).ToList();
+                    if (!Members.Any())
+                    {
+                        Message = "По вашему запросу результатов нет";
+                    }
                     break;
             }
         }

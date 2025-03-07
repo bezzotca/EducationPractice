@@ -6,95 +6,115 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="EducationPractice.Views.ExpertView"
-			  x:DataType="vm:ExpertViewModel">
-	<Grid RowDefinitions="100,*" Background="#95EE6B">
-		<StackPanel Grid.Row="0"
-					Spacing="10"
-					Orientation="Horizontal">
-			<Button
-				Content="Вернуться назад"
+			  x:DataType="vm:ExpertViewModel"
+			 Background="#95EE6B">
+	<Grid RowDefinitions="1,*">
+		<TextBlock Grid.Row="0"
+			Text="Члены жюри"
+					FontFamily="Times New Roman"
+					FontWeight="Bold"
+					FontSize="26"
+					Foreground="Black"
+					Width="300"
+					Height="30"
+					Margin="0,20"/>
+		<Grid RowDefinitions="100,*" Background="#95EE6B" Grid.Row="1">
+			<StackPanel Grid.Row="0"
+						Spacing="10"
+						Orientation="Horizontal">
+				<Button
+					Content="Вернуться назад"
+					Margin="20,10,0,0"
+					FontFamily="Times New Roman"
+					FontWeight="Bold"
+					HorizontalContentAlignment="Center"
+					Width="130"
+					Height="30"
+					Command="{Binding GoBack}"
+					BorderBrush="Black"
+						BorderThickness="2"
+							Background="#F66F89"
+							Foreground="Black"
+					CornerRadius="5"/>
+				<TextBox Height="50"
+						 Width="250"
+						 Watermark="Фильтрация по названию"
+						 Text="{Binding TextFind}"
+						 FontFamily="Times New Roman"
+							 Background="White"
+							 Foreground="Black"
+							 FontWeight="Bold"
+							 BorderBrush="Black"
+							 BorderThickness="2"/>
+				<StackPanel>
+					<RadioButton Content="По убыванию возраста"
+								 Command="{Binding DataSort}"
+								 CommandParameter="1"
+								 Foreground="Black"
+							 FontWeight="Bold"/>
+					<RadioButton Content="По возрастанию возраста"
+								 Command="{Binding DataSort}"
+								 CommandParameter="2"
+								 Foreground="Black"
+							 FontWeight="Bold"/>
+
+				</StackPanel>
+				<Button
+				Content="Обновить"
 				Margin="20,10,0,0"
-				FontFamily="Times New Roman"
-				FontWeight="Bold"
 				HorizontalContentAlignment="Center"
-				Width="130"
+				Width="100"
 				Height="30"
-				Command="{Binding GoBack}"
-				BorderBrush="Black" 
-					BorderThickness="2" 
-						Background="#F66F89" 
-						Foreground="Black"
-				CornerRadius="5"/>
-			<TextBox Height="50"
-					 Width="250"
-					 Watermark="Фильтрация по названию"
-					 Text="{Binding TextFind}"
-					 FontFamily="Times New Roman" 
-						 Background="White" 
-						 Foreground="Black" 
-						 FontWeight="Bold" 
-						 BorderBrush="Black" 
-						 BorderThickness="2"/>
-			<StackPanel>
-				<RadioButton Content="По убыванию возраста" 
-							 Command="{Binding DataSort}" 
-							 CommandParameter="1"
-							 Foreground="Black" 
-						 FontWeight="Bold"/>
-				<RadioButton Content="По возрастанию возраста" 
-							 Command="{Binding DataSort}" 
-							 CommandParameter="2"
-							 Foreground="Black" 
-						 FontWeight="Bold"/>
-				
+				Command="{Binding UpdateButton}"
+				BorderBrush="Black"
+						BorderThickness="2"
+							Background="#F66F89"
+							FontFamily="Times New Roman"
+							Foreground="Black"
+							FontWeight="Bold"/>
 			</StackPanel>
-			<Button
-			Content="Обновить"
-			Margin="20,10,0,0"
-			HorizontalContentAlignment="Center"
-			Width="100"
-			Height="30"
-			Command="{Binding UpdateButton}"
-			BorderBrush="Black"
-					BorderThickness="2"
-						Background="#F66F89"
+			<StackPanel Grid.Row="1">
+				<TextBlock
+						Text="{Binding Message}"
+						Foreground="Red"
 						FontFamily="Times New Roman"
-						Foreground="Black"
 						FontWeight="Bold"/>
-		</StackPanel>
-		<ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Background="#FBFE72">
-			<ListBox ItemsSource="{Binding Experts}" Width="800" Height="450" Background="#FBFE72">
-				<ListBox.ItemTemplate>
-					<DataTemplate>
-						<Border BorderBrush="Black" BorderThickness="2" CornerRadius="5" Margin="0,5" Background="LimeGreen">
-							<Grid ColumnDefinitions="100,*">
-								<StackPanel Grid.Column="0">
-									<Image Source="{Binding Photo}"
-										   Height="100"
-										   Width="100"/>
-								</StackPanel>
-								<StackPanel Grid.Column="1" Margin="5,5,5,5">
-									<TextBlock Text="{Binding Fcs, StringFormat=ФИО: {0}}"
-											   TextWrapping="Wrap"
-											   Foreground="Black"
-											   FontFamily="Times New Roman"
-											   FontWeight="Bold"/>
-									<TextBlock Text="{Binding Birthdate, StringFormat=Дата рождения: {0}}"
-											   TextWrapping="Wrap"
-											   Foreground="Black"
-											   FontFamily="Times New Roman"
-											   FontWeight="Bold"/>
-									<TextBlock Text="{Binding PhoneNumber, StringFormat=Номер телефона: {0}}"
-											   TextWrapping="Wrap"
-											   Foreground="Black"
-											   FontFamily="Times New Roman"
-											   FontWeight="Bold"/>
-								</StackPanel>
-							</Grid>
-						</Border>
-					</DataTemplate>
-				</ListBox.ItemTemplate>
-			</ListBox>
-		</ScrollViewer>
+				<ScrollViewer VerticalScrollBarVisibility="Auto" Background="#FBFE72">
+					<ListBox ItemsSource="{Binding Experts}" Width="800" Height="450" Background="#FBFE72">
+						<ListBox.ItemTemplate>
+							<DataTemplate>
+								<Border BorderBrush="Black" BorderThickness="2" CornerRadius="5" Margin="0,5" Background="LimeGreen">
+									<Grid ColumnDefinitions="100,*">
+										<StackPanel Grid.Column="0">
+											<Image Source="{Binding Photo}"
+												   Height="100"
+												   Width="100"/>
+										</StackPanel>
+										<StackPanel Grid.Column="1" Margin="5,5,5,5">
+											<TextBlock Text="{Binding Fcs, StringFormat=ФИО: {0}}"
+													   TextWrapping="Wrap"
+													   Foreground="Black"
+													   FontFamily="Times New Roman"
+													   FontWeight="Bold"/>
+											<TextBlock Text="{Binding Birthdate, StringFormat=Дата рождения: {0}}"
+													   TextWrapping="Wrap"
+													   Foreground="Black"
+													   FontFamily="Times New Roman"
+													   FontWeight="Bold"/>
+											<TextBlock Text="{Binding PhoneNumber, StringFormat=Номер телефона: {0}}"
+													   TextWrapping="Wrap"
+													   Foreground="Black"
+													   FontFamily="Times New Roman"
+													   FontWeight="Bold"/>
+										</StackPanel>
+									</Grid>
+								</Border>
+							</DataTemplate>
+						</ListBox.ItemTemplate>
+					</ListBox>
+				</ScrollViewer>
+			</StackPanel>
+		</Grid>
 	</Grid>
+	
 </UserControl>
